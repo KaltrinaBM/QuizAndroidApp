@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/painting"
+    tools:context="com.example.android.quiz.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageQuiz"
+        android:layout_width="300dp"
+        android:layout_height="365dp"
+        android:scaleType="fitCenter"
+        android:layout_margin="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/questionAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/imageQuiz"
+        android:layout_margin="16dp"
+        android:layout_toEndOf="@+id/imageQuiz"
+        android:layout_toRightOf="@id/imageQuiz"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_alignEnd="@+id/imageQuiz" />
+
+    <TextView
+        android:id="@+id/quizApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageQuiz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/app_title"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/quizInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="16dp"
+        android:shadowColor="@color/colorText"
+        android:shadowDx="1.4"
+        android:shadowDy="2.2"
+        android:shadowRadius="4"
+        android:text="@string/app_info"
+        android:textColor="@color/colorLight"
+        android:textSize="22sp"
+        android:textStyle="italic|bold" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:gravity="center"
+        android:hint="@string/quiz_name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/colorText"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        android:layout_above="@id/next" />
+
+    <RadioGroup
+        android:id="@+id/optionGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/next"
+        android:layout_margin="16dp"
+        android:layout_toEndOf="@+id/imageQuiz"
+        android:layout_toRightOf="@id/imageQuiz"
+        android:layout_alignParentEnd="true">
+
+        <RadioButton
+            android:id="@+id/option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorText"
+            android:text=""
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorText"
+            android:text=""
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorText"
+            android:text=""
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+    </RadioGroup>
+    <CheckBox
+        android:id="@+id/artist1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="18dp"
+        android:layout_above="@id/quizInfo"
+        android:layout_marginLeft="18dp"
+        android:visibility="invisible"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="18dp"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artist2"
+        android:layout_below="@id/artist1"
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:visibility="invisible"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artist3"
+        android:layout_below="@id/artist2"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:visibility="invisible"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artist4"
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_below="@id/artist3"
+        android:visibility="invisible"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artist5"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_below="@id/artist4"
+        android:visibility="invisible"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorLight"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/questionAnswer"
+        android:layout_margin="16dp"
+        android:layout_toEndOf="@+id/imageQuiz"
+        android:layout_toRightOf="@id/imageQuiz"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:text="@string/quiz_button"
+        android:textAllCaps="false"
+        android:textColor="@color/colorLight"
+        android:textSize="25sp"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
+

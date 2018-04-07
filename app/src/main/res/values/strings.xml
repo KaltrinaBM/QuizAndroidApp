@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <!--  Set text to the app image, button and text views -->
+    <string name="quiz_name">Name</string>
+    <string name="quiz_button">Start</string>
+    <string name="button_next">\u2794</string>
+    <string name="correctAnswer">Correct  \u2714</string>
+    <string name="buttonRestart">Restart</string>
+    <string name="finishText">Finish</string>
+    <string name="wrongAnswer">Wrong!</string>
+    <string name="button_check">Check</string>
+    <string name="arrow"> </string>
+    <string name="scorePoints">You Have %d</string>
+    <string name="lastQuestion">Paintings of which artists did you see in this quiz?</string>
+    <!--  Quiz's questions and information about art -->
+    <string name="app_title">Can You Name These Famous Works Of Art?</string>
+    <string name="app_info">Only 9% of the entire population knows all of these works of art!</string>
+    <string name="question1">1. Can you name this painting?</string>
+    <string name="question2">2. Can you name this painting?</string>
+    <string name="question3">3. Can you name this painting?</string>
+    <string name="question4">4. Can you name this painting?</string>
+    <string name="question5">5. Can you name this painting?</string>
+    <string name="question6">6. Can you name this painting?</string>
+    <string name="question7">7. Can you name this painting?</string>
+    <string name="question8">8. Can you name this painting?</string>
+    <string name="question9">9. Can you name this painting?</string>
+    <string name="question10">10. Can you name this painting?</string>
+    <!--  Quiz's options that have to be selected one of them in each questions -->
+    <string name="option1">The Sistine Madonna</string>
+    <string name="option2">The Mona Lisa</string>
+    <string name="option3">The Isleworth Mona Lisa</string>
+    <string name="option4">The Swirls in the Night Sky</string>
+    <string name="option5">Hogwarts at Night</string>
+    <string name="option6">The Starry Night</string>
+    <string name="option7">Girl with a Pearl Earring</string>
+    <string name="option8">Girl with a Blue Turban</string>
+    <string name="option9">Girl before a Mirror</string>
+    <string name="option10">Jesus and Friends</string>
+    <string name="option11">The Last Supper</string>
+    <string name="option12">The Night Watch</string>
+    <string name="option13">The Ghost</string>
+    <string name="option14">The Scream</string>
+    <string name="option15">The Son of Man</string>
+    <string name="option16">Mr and Mrs Andrews</string>
+    <string name="option17">The Victorian Farmer and His Wife</string>
+    <string name="option18">American Gothic</string>
+    <string name="option19">The Persistence of Memory</string>
+    <string name="option20">Melty Clock Things</string>
+    <string name="option21">The Time Warp</string>
+    <string name="option22">The Creation of Adam</string>
+    <string name="option23">The Touch of God</string>
+    <string name="option24">Separation of Light from Darkness</string>
+    <string name="option25">The Flower Carrier</string>
+    <string name="option26">Self-Portrait with Thorn Necklace and Hummingbird</string>
+    <string name="option27">Self-Portrait with Bonito</string>
+    <string name="option28">Self-Portrait without beard</string>
+    <string name="option29">Empty Sadness</string>
+    <string name="option30">Self-Portrait</string>
+    <!--  Quiz's information when it's clicked wrong question -->
+    <string name="answer1">The Mona Lisa by Leonardo da Vinci is the most well-known work of art in history, and has been at the Louvre Museum in Paris since 1797.</string>
+    <string name="answer2">The Starry Night by Vincent van Gogh was inspired by the painter is view in his asylum. It is on permanent collection at the Museum of Modern Art in New York City.</string>
+    <string name="answer3">Girl with a Pearl Earring by Johannes Vermeer is on display at the Mauritshuis in Holland. The painting was the subject of a historical fiction book called Girl with a Pearl Earring which was later turned into a movie starring Scarlett Johansson.</string>
+    <string name="answer4">The Last Supper by Leonardo da Vinci is a mural painting that can be seen at the refectory at the Convent of Santa Maria delle Grazie in Milan, Italy.</string>
+    <string name="answer5">There are four versions of The Scream by Edvard Munch: two painted and two pastel versions.</string>
+    <string name="answer6">American Gothic by Grant Wood is one of the most parodied paintings in history.</string>
+    <string name="answer7">This surrealist painting by Salvador Dali was inspired after the painter watched cheese melting in the sun. It is currently displayed at the Museum of Modern Art in New York City.</string>
+    <string name="answer8">The Creation of Adam is part of the fresco by Michelangelo and can be seen on the ceiling at the Sistine Chapel.</string>
+    <string name="answer9">This painting by Frida Kahlo is one of her most well-known self-portraits. She painted it after her divorce from fellow painter Diego Rivera. Itis on display at the Harry Ransom Center at the University of Texas at Austin.</string>
+    <string name="answer10">Vincent van Gogh is Self-portrait without beard may have been the painter is last self-portrait before he killed himself.</string>
+
+    <string name="firstArtist">Johannes Vermeer</string>
+    <string name="secondArtist">Pablo Picasso</string>
+    <string name="thirdrtist">Sandro Botticelli</string>
+    <string name="fourthArtist">Grant Wood</string>
+    <string name="fifthArtist">Raphael</string>
+</resources>
