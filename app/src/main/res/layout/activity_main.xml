@@ -15,8 +15,7 @@
         android:layout_marginTop="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:scaleType="fitCenter"
-        />
+        android:scaleType="fitCenter" />
 
     <TextView
         android:id="@+id/questionAnswer"
@@ -24,11 +23,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageQuiz"
         android:layout_margin="16dp"
+        android:freezesText="true"
         android:gravity="center"
         android:textColor="@color/colorText"
         android:textSize="30sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/quizApp"
@@ -39,6 +38,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="52dp"
+        android:freezesText="true"
         android:gravity="center"
         android:text="@string/app_title"
         android:textColor="@color/colorText"
@@ -50,9 +50,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/score"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginBottom="46dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:freezesText="true"
         android:shadowColor="@color/colorText"
         android:shadowDx="1.4"
         android:shadowDy="2.2"
@@ -66,14 +67,14 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/next"
+        android:layout_margin="16dp"
         android:ems="15"
         android:gravity="center"
         android:hint="@string/quiz_name"
         android:inputType="textPersonName"
         android:textColorHint="@color/colorText"
-        android:textSize="20sp"
-        android:layout_margin="16dp"
-        android:layout_above="@id/next" />
+        android:textSize="20sp" />
 
     <RadioGroup
         android:id="@+id/optionGroup"
@@ -84,6 +85,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="8dp"
+        android:freezesText="true"
         android:orientation="vertical"
         android:visibility="invisible">
 
@@ -125,60 +127,60 @@
         android:id="@+id/artist1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="18dp"
         android:layout_above="@id/quizInfo"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="18dp"
-        android:visibility="invisible"
+        android:layout_marginRight="18dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
+        android:visibility="invisible" />
+
     <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/artist2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/artist1"
-        android:layout_marginRight="18dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="18dp"
-        android:visibility="invisible"
+        android:layout_marginRight="18dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="8dp"
-        />
+        android:visibility="invisible" />
+
     <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/artist3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/artist2"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
-        android:visibility="invisible"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="8dp"
-        />
+        android:visibility="invisible" />
+
     <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/artist4"
-        android:layout_marginRight="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_below="@id/artist3"
-        android:visibility="invisible"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"
-        />
-    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/artist5"
+        android:layout_below="@id/artist3"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp"
-        android:layout_below="@id/artist4"
-        android:visibility="invisible"
         android:textSize="18sp"
         android:textStyle="bold"
-        />
+        android:visibility="invisible" />
+
+    <CheckBox
+        android:id="@+id/artist5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/artist4"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/score"
@@ -190,8 +192,7 @@
         android:gravity="center_horizontal"
         android:textColor="@color/colorText"
         android:textSize="30sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/explain"
@@ -210,12 +211,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="16dp"
         android:text="@string/quiz_button"
         android:textAllCaps="false"
         android:textColor="@color/colorLight"
-        android:textSize="25sp"
-        android:layout_alignParentEnd="true" />
+        android:textSize="25sp" />
 </RelativeLayout>
 

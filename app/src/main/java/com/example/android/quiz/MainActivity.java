@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,8 +17,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
-
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView imageView;
     private EditText editText;
@@ -29,9 +27,6 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private RadioGroup radioGroup;
     private int question, points;
     private CheckBox ch1, ch2, ch3, ch4, ch5;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +42,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         tv5 = findViewById(R.id.quizInfo);
         radioGroup = findViewById(R.id.optionGroup);
         a = findViewById(R.id.option1);
-        b = findViewById(R.id.option2);;
+        b = findViewById(R.id.option2);
         c = findViewById(R.id.option3);
         button = findViewById(R.id.next);
         button.setOnClickListener(this);
@@ -58,9 +53,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         ch5 = findViewById(R.id.artist5);
         question = 0;
         points = 0;
-
     }
-
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -68,12 +61,38 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         Bitmap bitmap = savedInstanceState.getParcelable("image");
         imageView.setImageBitmap(bitmap);
         imageView.setBackgroundResource(R.drawable.corner);
+        imageView.setVisibility(savedInstanceState.getInt("image_visibility"));
         question = savedInstanceState.getInt("switchQuestions");
         points = savedInstanceState.getInt("points");
-
-        Log.v("my_tag", "text" +tv1);
-       ;
-
+        editText.setVisibility(savedInstanceState.getInt("visibility_name"));
+        radioGroup.setVisibility(savedInstanceState.getInt("visibility_btn"));
+        tv1.setVisibility(savedInstanceState.getInt("visibility1"));
+        tv2.setVisibility(savedInstanceState.getInt("visibility2"));
+        tv3.setVisibility(savedInstanceState.getInt("visibility3"));
+        tv4.setVisibility(savedInstanceState.getInt("visibility4"));
+        tv5.setVisibility(savedInstanceState.getInt("visibility5"));
+        tv2.setTextColor(savedInstanceState.getInt("color"));
+        tv1.setText(savedInstanceState.getString("tv1"));
+        tv2.setText(savedInstanceState.getString("tv2"));
+        tv3.setText(savedInstanceState.getString("tv3"));
+        tv4.setText(savedInstanceState.getString("tv4"));
+        tv5.setText(savedInstanceState.getString("tv5"));
+        tv3.setVisibility((savedInstanceState.getInt(editText.getText() + getString(R.string.scorePoints, points))));
+        ch1.setVisibility(savedInstanceState.getInt("ch1"));
+        ch2.setVisibility(savedInstanceState.getInt("ch2"));
+        ch3.setVisibility(savedInstanceState.getInt("ch3"));
+        ch4.setVisibility(savedInstanceState.getInt("ch4"));
+        ch5.setVisibility(savedInstanceState.getInt("ch5"));
+        ch1.setText(savedInstanceState.getString("ch1_t"));
+        ch2.setText(savedInstanceState.getString("ch2_t"));
+        ch3.setText(savedInstanceState.getString("ch3_t"));
+        ch4.setText(savedInstanceState.getString("ch4_t"));
+        ch5.setText(savedInstanceState.getString("ch5_t"));
+        button.setVisibility(savedInstanceState.getInt("visibility"));
+        button.setText(savedInstanceState.getString("text"));
+        a.setText(savedInstanceState.getString("text_a"));
+        b.setText(savedInstanceState.getString("text_b"));
+        c.setText(savedInstanceState.getString("text_c"));
     }
 
     @Override
@@ -84,8 +103,37 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
         Bitmap bitmap = drawable.getBitmap();
         outState.putParcelable("image", bitmap);
-
-        Log.v("my_tag", "text" +tv1);
+        outState.putInt("image_visibility", imageView.getVisibility());
+        outState.putInt("visibility_btn", radioGroup.getVisibility());
+        outState.putString("text_a", a.getText().toString());
+        outState.putString("text_b", b.getText().toString());
+        outState.putString("text_c", c.getText().toString());
+        outState.putString("name", editText.toString());
+        outState.putInt("visibility_name", editText.getVisibility());
+        outState.putInt("visibility1", tv1.getVisibility());
+        outState.putInt("visibility2", tv2.getVisibility());
+        outState.putInt("visibility3", tv3.getVisibility());
+        outState.putInt("visibility4", tv4.getVisibility());
+        outState.putInt("visibility5", tv5.getVisibility());
+        outState.putString("tv1", tv1.getText().toString());
+        outState.putString("tv2", tv2.getText().toString());
+        outState.putString("tv3", tv3.getText().toString());
+        outState.putString("tv4", tv4.getText().toString());
+        outState.putString("tv5", tv5.getText().toString());
+        outState.putInt("color", tv2.getCurrentTextColor());
+        outState.putString("string3", tv3.toString());
+        outState.putInt("ch1", ch1.getVisibility());
+        outState.putInt("ch2", ch2.getVisibility());
+        outState.putInt("ch3", ch3.getVisibility());
+        outState.putInt("ch4", ch4.getVisibility());
+        outState.putInt("ch5", ch5.getVisibility());
+        outState.putString("ch1_t", ch1.getText().toString());
+        outState.putString("ch2_t", ch2.getText().toString());
+        outState.putString("ch3_t", ch3.getText().toString());
+        outState.putString("ch4_t", ch4.getText().toString());
+        outState.putString("ch5_t", ch5.getText().toString());
+        outState.putInt("visibilityB", button.getVisibility());
+        outState.putString("text", button.getText().toString());
     }
 
     @Override
@@ -103,22 +151,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         int id = item.getItemId();
 
         //noinspection SimpSlifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
     }
-
-
-
 
     /**
      * Switch statement to change the questions and image when button is clicked.
      */
-
     @Override
-    public void onClick(View view)  {
+    public void onClick(View view) {
         switch (question) {
             case 0: {
                 radioGroup.setVisibility(View.VISIBLE);
@@ -509,10 +549,9 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 tv4.setVisibility(View.VISIBLE);
                 ch1.setText(R.string.firstArtist);
                 ch2.setText(R.string.secondArtist);
-                ch3.setText(R.string.thirdrtist);
+                ch3.setText(R.string.thirdArtist);
                 ch4.setText(R.string.fourthArtist);
                 ch5.setText(R.string.fifthArtist);
-
                 ch1.setChecked(false);
                 ch2.setChecked(false);
                 ch3.setChecked(false);
@@ -524,11 +563,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 ch4.setVisibility(View.VISIBLE);
                 ch5.setVisibility(View.VISIBLE);
                 button.setText(R.string.button_check);
-
                 question = 21;
                 break;
-
-
             }
             case 21: {
                 button.setText(R.string.finishText);
@@ -544,8 +580,6 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 ch4.setVisibility(View.INVISIBLE);
                 ch5.setVisibility(View.INVISIBLE);
                 tv4.setVisibility(View.INVISIBLE);
-
-
                 if (ch1.isChecked()) {
                     ch1.setChecked(false);
                     tv2.setVisibility(View.VISIBLE);
@@ -581,10 +615,10 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                     tv2.setTextSize(30);
                     tv2.setTextColor(Color.parseColor("#FFAC080A"));
                 }
-
+                Toast.makeText(MainActivity.this,
+                        "Thank you\nFinish for results!", Toast.LENGTH_LONG).show();
                 question = 22;
                 break;
-
             }
             case 22: {
                 button.setText(R.string.finishText);
@@ -596,17 +630,10 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 b.setEnabled(false);
                 c.setEnabled(false);
                 tv2.setVisibility(View.INVISIBLE);
-                tv3.setText( (editText.getText() + getString(R.string.scorePoints, points)));
+                tv3.setText((editText.getText() + getString(R.string.scorePoints, points)));
                 button.setText(R.string.buttonRestart);
-                Toast.makeText(MainActivity.this,
-                        "Your Points", Toast.LENGTH_LONG).show();
-
                 question = 0;
             }
         }
     }
-
-
-
-
 }

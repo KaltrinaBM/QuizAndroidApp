@@ -10,7 +10,7 @@
     <string name="wrongAnswer">Wrong!</string>
     <string name="button_check">Check</string>
     <string name="arrow"> </string>
-    <string name="scorePoints">You Have %d</string>
+    <string name="scorePoints">\nYou Have %d</string>
     <string name="lastQuestion">Paintings of which artists did you see in this quiz?</string>
     <!--  Quiz's questions and information about art -->
     <string name="app_title">Can You Name These Famous Works Of Art?</string>
@@ -65,12 +65,12 @@
     <string name="answer6">American Gothic by Grant Wood is one of the most parodied paintings in history.</string>
     <string name="answer7">This surrealist painting by Salvador Dali was inspired after the painter watched cheese melting in the sun. It is currently displayed at the Museum of Modern Art in New York City.</string>
     <string name="answer8">The Creation of Adam is part of the fresco by Michelangelo and can be seen on the ceiling at the Sistine Chapel.</string>
-    <string name="answer9">This painting by Frida Kahlo is one of her most well-known self-portraits. She painted it after her divorce from fellow painter Diego Rivera. Itis on display at the Harry Ransom Center at the University of Texas at Austin.</string>
+    <string name="answer9">This painting by Frida Kahlo is one of her most well-known self-portraits. She painted it after her divorce from fellow painter Diego Rivera. It is on display at the Harry Ransom Center at the University of Texas at Austin.</string>
     <string name="answer10">Vincent van Gogh is Self-portrait without beard may have been the painter is last self-portrait before he killed himself.</string>
 
     <string name="firstArtist">Johannes Vermeer</string>
     <string name="secondArtist">Pablo Picasso</string>
-    <string name="thirdrtist">Sandro Botticelli</string>
+    <string name="thirdArtist">Sandro Botticelli</string>
     <string name="fourthArtist">Grant Wood</string>
     <string name="fifthArtist">Raphael</string>
 </resources>
